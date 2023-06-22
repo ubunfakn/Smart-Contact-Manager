@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base ::
+    Layout(~{::section})">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+    </head>
+    <body>
+        <section class="text-center mb-3">
+            <img style="height: 55vh; width: 40vh;"
+                th:src="@{/Images/home.jpg}">
+            <h1 class="font-italic font-bold mt-3 mr-2 ml-2" style="font-size:
+                5vh;">Start adding your Contacts to cloud with Security of Boot</h1>
+            <a style="width: 66vw; height: 5vh;font-size: 3vh;"
+                th:href="@{/user/addcontact}" class="btn btn-outline-primary
+                mt-4 text-center mb-2">Start Adding Contacts</a>
+
+                <hr/>
+                <div class="container">
+                <h3 class="my-3 mt-5 font-bold font-italic">Donate Us</h3>
+                <input id="paymentfield" type="number" class="form-control" placeholder="Enter Amount here">
+                </div>
+                <div class="container text-center">
+                    <button onclick="paymentStart()" class="btn btn-success btn-block mt-3">Pay</button>
+                </div>
+
+            <script>
+                    $(document).ready(() => {
+                        $('.item').removeClass('active');
+                        $('#home').addClass("active");
+                    })        
+            </script>
+        </section>
+
+
+    </body>
+</html>

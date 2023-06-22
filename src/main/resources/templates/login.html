@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base ::
+    Layout(~{::section})">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section>
+
+            <div class="container">
+
+                <div class="card cardlogin card-container text-white" style="background-color: darkblue;">
+
+                    <h3 class="text-center text-white" style="font-size: 175%;">Login</h3>
+                    <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+                    <img id="profile-img" class="profile-img-card mt-3"
+                        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+
+
+                    <p id="profile-name" class="profile-name-card mt-1"></p>
+
+
+                    <form class="form-signin" th:action="@{/dologin}"
+                        method="post">
+
+
+                        <div th:if="${param.error}" class="alert alert-danger mt-1">
+                            Invalid username or password
+                        </div>
+
+                        <div th:if="${param.logout}" class="alert
+                            alert-success mt-1">
+                            You've been logged out
+                        </div>
+
+
+                        <span id="reauth-email" class="reauth-email"></span>
+                        <input type="email" id="username" class="form-control mt-4"
+                            placeholder="Email address" name="username" required autofocus>
+                        <input type="password" id="inputPassword" name="password"
+                            class="form-control mt-3" placeholder="Password"
+                            required>
+
+
+                        <div id="remember" class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me" class="mt-3">
+                                Remember me
+                            </label>
+                        </div>
+
+
+                        <button class="btn btn-lg btn-primary btn-block
+                            btn-signin mt-2" type="submit">Sign in</button>
+
+
+                    </form><!-- /form -->
+
+
+                    <a href="#" th:href="@{/forgotpassword}" class="forgot-password mt-2 text-white" style="font-size: 1rem;">
+                        forgot password?
+                    </a>
+
+
+                </div><!-- /card-container -->
+
+            </div><!-- /container -->
+
+        </section>
+
+    </body>
+</html>

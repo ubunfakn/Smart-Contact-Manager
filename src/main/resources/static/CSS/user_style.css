@@ -1,0 +1,106 @@
+/* body{
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33))!important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+} */
+.bg-primary{
+    background:blue!important;
+}
+
+body, html {
+    /* height: 111%; */
+    background-repeat: no-repeat;
+    /* background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33)); */
+    background-color: white;
+}
+
+
+/* Styling Side bar */
+@media only screen and (max-width: 600px)
+{
+    .sidebar{
+        width: 80% !important;
+        background-color: white;
+        height: 50%;
+        position: fixed;
+        padding-top: 20px;
+        display: none;
+    }
+    .content{
+        background:fixed;
+        margin-left: 0%!important;
+    }
+}
+.sidebar{
+    width: 17%;
+    background-color:navy;
+    height: 116%;
+    position: absolute;
+    padding-top: 35px;
+    z-index: 999999999999999999999999999;
+}
+
+.sidebar a{
+    display: block;
+    width: 100%;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar a:hover{
+    background: #e2e2e2;
+}
+
+.content{
+    background:fixed;
+    margin-left: 18%;
+    padding-left: 1%;
+}
+
+.sidebar .crossbtn{
+    position: absolute;
+    top: 0;
+    right: 35px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.content .dashbtn{
+    cursor: pointer;
+}
+
+#addcontactcard{
+    background-color:darkblue;
+}
+
+.myprofile{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.search{
+    position: relative;
+    width: 60%;
+}
+
+.search-result{
+    position: absolute;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid gray ;
+    display: none;
+}
+
+.showcontactcard{
+    /* width: fit-content;
+    height: fit-content; */
+}
+
+.active{
+    background: turquoise;
+    
+}

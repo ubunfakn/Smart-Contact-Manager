@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"
+    th:replace="normal/base :: Layout(~{::section})">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title th:text="${title}"></title>
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="card text-white mb-5" style="background-color: darkblue;">
+                    <div class="card-body text-center">
+                        <form
+                            th:action="@{/user/profile/doedit}"
+                            enctype="multipart/form-data"
+                            method="post">
+                            <div class="table-responsive">
+                            <img style="height: 200px; width: 200px;
+                                border-radius:
+                                50%;" th:src="@{'/Images/'+${user.imageURL}}"
+                                alt="">
+                            <h3 class="mt-4 text-center"><input type="text"
+                                    th:value="${user.name}" name="name"></input><spanspan</h3>
+                                    
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#USERID</th>
+                                    <th scope="col"><span
+                                            th:text="${user.id}"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Email</th>
+                                    <td>
+                                        <input type="email"
+                                            th:value="${user.email}" name="email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Password</th>
+                                    <td>
+                                        <input type="password"
+                                            th:value="${user.password}" name="password">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Role</th>
+                                    <td><span th:text="${user.role}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Account Active</th>
+                                    <td><span th:text="${user.enabled}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">About</th>
+                                    <td>
+                                        <input type="text" name="about"
+                                            th:value="${user.about}">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <button style="width: 25%; height: 5vh; font-size: 3vh;" type="submit" class="btn btn-primary mr-1 mt-5">Save</button>
+                        <a style="width: 25%; height: 5vh; font-size: 3vh;" th:href="@{/user/profile}" class="btn btn-outline-danger ml-3 mt-5">Back</a>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
