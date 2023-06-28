@@ -10,7 +10,7 @@
     </head>
     <body>
         <section>
-            <div th:if="${session.msg}" class="container mr-5">
+            <div th:if="${session.msg}" class="container">
                 <div th:classappend="${'alert-'+session.msg.type}" class="alert
                     text-center" role="alert">
                     <span th:text="${session.msg.content}"></span>

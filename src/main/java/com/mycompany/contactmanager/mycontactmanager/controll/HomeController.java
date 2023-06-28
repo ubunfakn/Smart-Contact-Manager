@@ -149,6 +149,7 @@ public class HomeController {
     {
         model.addAttribute("title", "Change-Password");
         if(newPassword.equals(confirmedPassword))
+    
         {
            List<OTP> list= this.otpDao.findAll();
            String email=list.get(0).getEmail();
