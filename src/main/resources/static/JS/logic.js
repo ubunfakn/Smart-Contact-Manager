@@ -67,6 +67,8 @@ const paymentStart=()=>{
                 type:'POST',
                 dataType:'json',
                 success:function(response){
+
+                    
                     //invoked when success
                     console.log(response);
                     if(response.status==='created')
